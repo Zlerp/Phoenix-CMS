@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
+
+	#Casein routes
+	namespace :casein do
+		resources :media
+	end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'pheonix#index'
+
+  get '/contact' => 'pheonix#contact', as: 'contact'
+
+  get '/media' => 'pheonix#media', as: 'media'
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
