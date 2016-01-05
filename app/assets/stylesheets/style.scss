@@ -1,0 +1,48 @@
+
+$orange: #f1b521;
+$yellow: #e0e31a;
+$lGrey : #66696e;
+$dGrey : #4a4a4f;
+
+
+
+@import "reset";
+@import "progressBar";
+@import "grid";
+@import "centering";
+
+
+@import "nav-bar";
+@import "background";
+
+
+
+
+@import "contact";
+@import "enterButton";
+
+body{
+  background: white;
+}
+
+.drawer {
+  z-index: 40!important;
+}
+// body{
+//   height: 50px;
+//   width: 50px;
+//   // background-color: $mainC;
+// }
+//
+// h2{
+//   color:blue;
+// }
+//
+//
+// ul{
+//   background: red;
+//   li {
+//     display: inline;
+//   }
+//
+// }

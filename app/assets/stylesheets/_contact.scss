@@ -1,0 +1,213 @@
+.headline {
+  font-size: 70px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 25vh;
+  margin-bottom: 20vh;
+  -moz-text-shadow:0px 2px 2px rgba(0,0,0,0.4);
+  -webkit-text-shadow:0px 2px 2px rgba(0,0,0,0.4);
+  text-shadow:0px 2px 2px rgba(0,0,0,0.4);
+}
+
+
+
+.heading {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactHead {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.contactHeader {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 15vh;
+  width: 75%;
+
+}
+
+
+
+
+.contactForm {
+  background-color: $yellow;
+  height: 50px;
+  padding-top: 1vh;
+  margin-bottom: 15px;
+
+  input{
+    background-color: none;
+    // height: 20px;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    // display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: 0;
+    border: none;
+    // -webkit-box-shadow:
+    // inset 0 0 8px  rgba(0,0,0,0.1),
+          // 0 0 16px rgba(0,0,0,0.1);
+    // -moz-box-shadow:
+      // inset 0 0 8px  rgba(0,0,0,0.1),
+            // 0 0 16px rgba(0,0,0,0.1);
+    // box-shadow:
+      // inset 0 0 8px  rgba(0,0,0,0.1),
+            // 0 0 16px rgba(0,0,0,0.1);
+    padding: 15px;
+    background: none;
+    font-size: 1.3em;
+    margin-left: 10px;
+    color: $dGrey;
+
+  }
+
+
+  .icon-contact {
+    margin-left: 10px;
+    color: $dGrey;
+  }
+}
+
+.contactFormComments {
+  background-color: $yellow;
+  height: 100px;
+  padding-top: 1vh;
+
+  textarea {
+    background-color: none;
+    // height: 20px;
+    width: 85%;
+    height: 90%;
+    margin: 0 auto;
+    // display: block;
+
+    outline: 0;
+    border: none;
+    // -webkit-box-shadow:
+    // inset 0 0 8px  rgba(0,0,0,0.1),
+          // 0 0 16px rgba(0,0,0,0.1);
+    // -moz-box-shadow:
+      // inset 0 0 8px  rgba(0,0,0,0.1),
+            // 0 0 16px rgba(0,0,0,0.1);
+    // box-shadow:
+      // inset 0 0 8px  rgba(0,0,0,0.1),
+            // 0 0 16px rgba(0,0,0,0.1);
+    padding: 15px;
+    background: none;
+    font-size: 1.3em;
+    margin-left: 32px;
+    padding-top: 7px;
+    color: $dGrey;
+  }
+  .icon-contact {
+    margin-left: 10px;
+    color: $dGrey;
+    position: absolute;
+    margin-top: 10px;
+  }
+}
+
+.submitContact{
+  width: 30%;
+  height: 50px;
+  background-color: $yellow;
+  border: white solid 2px;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transition-property: all;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 35%;
+
+  button{
+    text-decoration: none;
+    font-size: 37px;
+    color: white;
+    background: none;
+    text-align: center;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-property: all;
+  }
+
+
+
+}
+
+.submitContact:hover{
+
+  border: $dGrey solid 2px;
+  button {
+    color: $dGrey;
+  }
+}
+
+
+.containerContact{
+
+  width: 75%;
+  height: 50vh;
+  margin: 0 auto;
+  background-color: $orange;
+  margin-top: 2vh;
+  padding: 10px 10px 10px 10px;
+}
+
+.sendButton {
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .containerContact{
+    height: 70vh;
+  }
+  .submitContact{
+    width: 100%;height: 50px;
+    background-color: $yellow;
+    margin-top: 20px;
+    border: white solid 2px;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-property: all;
+    margin-left: 0;
+
+    button{
+      text-decoration: none;
+      font-size: 37px;
+      color: white;
+      background: none;
+      text-align: center;
+      outline: none;
+      border: none;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      -webkit-transition-duration: .5s;
+      transition-duration: .5s;
+      -webkit-transition-property: all;
+    }
+
+
+
+  }
+  .sendButton {
+    margin-right: 30px;
+  }
+}
