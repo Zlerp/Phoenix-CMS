@@ -38,15 +38,6 @@ ActiveRecord::Schema.define(version: 20160105220428) do
     t.datetime "updated_at"
   end
 
-  create_table "media", force: :cascade do |t|
-    t.string   "title"
-    t.string   "caption"
-    t.string   "url"
-    t.string   "image"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "stuffs", force: :cascade do |t|
     t.string   "title"
     t.string   "caption"
