@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require jquery.fancybox
+//= require jquery.fancybox-buttons
+//= require jquery.fancybox-media
+//= require jquery.fancybox-thumbs
+//= require navbar
+//= require pace.min
+// require_tree .
