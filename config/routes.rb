@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 	#Casein routes
 	namespace :casein do
-		resources :media
+		resources :stuffs
 	end
 
   # The priority is based upon order of creation: first created -> highest priority.
