@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pheonix#index'
 
+  get '/contact' => 'pheonix#contact', as: 'contact'
+
+  get '/media' => 'pheonix#media', as: 'media'
+
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
