@@ -22,17 +22,24 @@
       <!-- Using Grid Example  -->
       <div class="section group">
         <div class="col col4 noSmall"></div>
-        <div class="col col4 headline">MEDIA</div>
+        <div class="col col4 headline">MEDIA
+          <a href="#myAnchor" rel="" id="anchor1" class="anchorLink">
+            <svg class="arrows">
+              <path class="a1" d="M0 0 L30 32 L60 0"></path>
+              <path class="a2" d="M0 20 L30 52 L60 20"></path>
+              <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+          </a>
+        </div>
         <div class="col col4 noSmall"></div>
       </div>
-
 
 
       <!-- <div class="mediaGallery">
         <a class="fancybox" href="http://www.wired.com/wp-content/uploads/2015/10/RickAndMorty.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="1_s.jpg" alt="" /></a>
       </div> -->
 
-      <div class="mediaGallery">
+      <div class="mediaGallery" id="myAnchor">
         <div class="container">
           <p class="mediaInfo">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -40,7 +47,7 @@
         </div>
         <div class="section group">
           <div class="col col4">
-            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/Qpn4mxcHPAw" title="Title">
+            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/MPIfJ0f19FU" title="Title">
               <div class="mediaClip">
                 <h2 class="clipTitle clipInfo hide">Title</h2>
                 <p class="clipCaption clipInfo">This is the caption.</p>
@@ -130,6 +137,9 @@
 
     <script>
     $(document).ready(function() {
+
+      //  MODAL MEDIA PLAYER
+
         $('.fancybox').fancybox({
           helpers:  {
               title : {
@@ -149,6 +159,15 @@
               }
           }
         });
+
+//        PAGE SCROLL FUNCTION
+
+        $('#anchor1').click(function(){
+          $('html, body').animate({
+              scrollTop: $( $(this).attr('href') ).offset().top -100
+          }, 500);
+          return false;
+          });
     });
     </script>
   </body>

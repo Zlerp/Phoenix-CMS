@@ -19,5 +19,4 @@
 //= require jquery.fancybox-thumbs
 //= require navbar
 //= require pace.min
-//= require scripts
 // require_tree .

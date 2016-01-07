@@ -51,6 +51,10 @@ $dGrey : #4a4a4f;
   vertical-align: middle;
 
 }
+.headline {
+  margin-bottom: 57vh;
+  margin-top: 40vh;
+}
 
 
 
@@ -89,6 +93,7 @@ $dGrey : #4a4a4f;
   -webkit-transition-property: all;
   visibility: hidden;
 
+
 }
 
 .mediaGallery {
@@ -114,6 +119,7 @@ $dGrey : #4a4a4f;
   }
 
 
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -124,9 +130,6 @@ $dGrey : #4a4a4f;
     margin-right: 30px;
 
   }
-
-
-
 
   .spacer1 {
     padding-top: 15px;
@@ -151,6 +154,10 @@ $dGrey : #4a4a4f;
   }
   .mediaImg {
     max-height: 400px;
+  }
+  .headline {
+    margin-bottom: 57vh;
+    margin-top: 40vh;
   }
 }
 
@@ -184,9 +191,7 @@ $dGrey : #4a4a4f;
 //   }
 // }
 
-// .hide{
-//   display: none;
-// }
+
 
 .mediaClip:hover{
 

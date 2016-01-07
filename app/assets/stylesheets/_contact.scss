@@ -75,8 +75,6 @@
   .icon-contact {
     margin-left: 10px;
     color: $dGrey;
-    margin-top: 0;
-    margin-bottom: 100px;
   }
 }
 
@@ -111,7 +109,12 @@
     padding-top: 7px;
     color: $dGrey;
   }
-
+  .icon-contact {
+    margin-left: 10px;
+    color: $dGrey;
+    position: absolute;
+    margin-top: 10px;
+  }
 }
 
 .submitContact{
