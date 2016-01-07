@@ -19,4 +19,7 @@
 //= require jquery.fancybox-thumbs
 //= require navbar
 //= require pace.min
+//= require modernizr.custom.js
+//= require classie.js
+//= require uiMorphingButton_inflow.js
 // require_tree .

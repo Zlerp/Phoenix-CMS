@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 
   get '/contact' => 'pheonix#contact', as: 'contact'
 
-  get '/media' => 'pheonix#media', as: 'media'
+	get '/media' => 'pheonix#media', as: 'media'
+
+	get '/about' => 'pheonix#about', as: 'about'
 
 
 

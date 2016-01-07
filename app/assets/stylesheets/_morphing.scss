@@ -1,0 +1,302 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather+Sans:800);
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+.morph-content {
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+
+/* Morph Button: Default Styles */
+
+.morph-button {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+
+.morph-button.open > button {
+	pointer-events: none;
+}
+
+.morph-content {
+	pointer-events: none;
+}
+
+.morph-button.open .morph-content {
+	pointer-events: auto;
+}
+
+
+/* Morph Button Style: In the content flow */
+.morph-button-inflow {
+	overflow: hidden;
+	max-width: 100%;
+	height: 70px;
+}
+
+.morph-button-inflow > button {
+	width: 100%;
+	line-height: 70px;
+}
+
+.morph-button-inflow .morph-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.morph-button-inflow .morph-content .morph-clone {
+	padding: 0;
+	font-weight: 700;
+	font-size: 1.5em;
+	line-height: 70px;
+}
+
+/* Colors and sizes for individual in flow buttons */
+.morph-button-inflow-1 {
+	width: 600px;
+	margin: 2em auto;
+	-webkit-transition: height 0.5s cubic-bezier(0.7,0,0.3,1);
+	transition: height 0.5s cubic-bezier(0.7,0,0.3,1);
+}
+
+.morph-button-inflow-1 > button span {
+	visibility: hidden;
+}
+
+.morph-content {
+	color: $orange;
+	background: $dGrey;
+}
+
+
+/* Let's add some nice easing for all cases */
+.morph-button .morph-content,
+.morph-button.open .morph-content,
+.morph-button-modal-4 .morph-clone {
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+/* Helper classes */
+.noscroll {
+	overflow: hidden;
+}
+
+.morph-button-overlay.scroll .morph-content {
+	overflow-y: scroll;
+}
+
+.morph-button-sidebar.scroll .morph-content {
+	overflow: auto;
+}
+
+/* No JS fallback: let's hide the button and show the content */
+.no-js .morph-button > button {
+	display: none;
+}
+
+.no-js .morph-button {
+	margin: 10px 0;
+	float: none;
+}
+
+.no-js .morph-button,
+.no-js .morph-button .morph-content,
+.no-js .morph-button .morph-content > div {
+	position: relative;
+	width: auto;
+	height: auto;
+	opacity: 1;
+	visibility: visible;
+	top: auto;
+	left: auto;
+	-webkit-transform: none;
+	transform: none;
+	pointer-events: auto;
+}
+
+.no-js .morph-button .morph-content .icon-close {
+	display: none;
+}
+
+.no-js .morph-button-sidebar {
+	width: 300px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	height: 100%;
+	background: #e85657;
+	overflow: auto;
+}
+
+.no-transition {
+	-webkit-transition: none !important;
+	transition: none !important;
+}
+
+/* Icons */
+
+/* Style for form modal */
+.content-style-form {
+	position: relative;
+	text-align: left;
+}
+
+.content-style-form h2 {
+	margin: 0;
+	padding: 0.4em 0 0.3em;
+	text-align: center;
+	font-weight: 300;
+	font-size: 3.5em;
+}
+
+.content-style-form form {
+	padding: 10px 30px;
+}
+
+.content-style-form form p {
+	margin: 0 0 5px 0;
+	font-size: 0.7em;
+}
+
+.content-style-form label {
+	display: block;
+	padding: 10px 0 0;
+	color: $orange;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+.content-style-form input[type="text"],
+.content-style-form input[type="password"] {
+	padding: 10px;
+	width: 100%;
+	background: transparent;
+	font-weight: 300;
+	font-size: 2.2em;
+}
+
+
+
+.content-style-form input:focus {
+	outline: 0;
+}
+
+.content-style-form button {
+	display: block;
+	margin-top: 2.5em;
+	padding: 1.5em;
+	width: 100%;
+	border: none;
+	background: #e75854;
+	color: #f9f6e5;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 800;
+	font-size: 1.25em;
+}
+
+.morph-button.open .content-style-form-1 h2,
+.morph-button.open .content-style-form-1 p,
+.morph-button.open .content-style-form-1 .icon-close {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+
+.morph-button.open .content-style-form-2 h2,
+.morph-button.open .content-style-form-2 p,
+.morph-button.open .content-style-form-2 .icon-close {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.content-style-form-4 form {
+	padding: 30px;
+	background: #fff;
+	color: $orange;
+	font-size: 1.5em;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.content-style-form-4 input[type="text"] {
+	border: none;
+	background-color: $lGrey;
+  // border: $yellow ridge 5px;
+}
+
+.content-style-form-4 form button {
+	background: $dGrey;
+  color: $orange;
+}
+
+
+@media screen and (max-width: 770px) {
+
+  .morph-button-inflow-1 {
+  	width: 90%;
+  }
+
+	.content-style-overlay {
+		font-size: 75%;
+	}
+
+	.content-style-overlay .icon-close {
+		top: 5px;
+		right: 5px;
+	}
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+	.morph-button-modal.open .morph-content {
+		top: 0% !important;
+		left: 0% !important;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+		transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.morph-content {
+		width: 200px;
+		height: 80px;
+	}
+
+
+
+	.morph-button-inflow .morph-content {
+		font-size: 0.9em;
+	}
+
+	.morph-content {
+		width: 220px;
+		height: 650px;
+	}
+
+	.morph-button-sidebar {
+		bottom: 0px;
+		left: 0px;
+	}
+
+	.morph-button-sidebar.open .morph-content {
+		height: 100% !important;
+	}
+}
