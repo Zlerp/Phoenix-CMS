@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+// require turbolinks
 //= require jquery.fancybox
 //= require jquery.fancybox-buttons
 //= require jquery.fancybox-media
