@@ -3,24 +3,10 @@
   <head>
   </head>
 	<body>
-    <!-- MOBILE RESPONSIVE MENU -->
-    <div id='cssmenu'>
-      <ul>
-         <li><a href='/'>Home</a></li>
-         <li><a href='/about'>About</a></li>
-         <li><a href='/media'>Media</a></li>
-         <!-- <li><a href='/contact'>Contact</a></li> -->
-      </ul>
-    </div>
-    <!-- Background -->
     <div id="bg">
       <!-- <img class="bg" src="pics/island-arial.jpeg" alt=""> -->
       <!-- <div id="bgTint"></div> -->
-
-
       <div class="spacer1"></div>
-
-      <!-- Using Grid Example  -->
       <div class="section group">
         <div class="col col4 noSmall"></div>
         <div class="col col4 headline">MEDIA
@@ -46,92 +32,28 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-        <div class="section group">
-          <div class="col col4">
-            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/MPIfJ0f19FU" title="Title">
-              <div class="mediaClip">
-                <h2 class="clipTitle clipInfo hide">Title</h2>
-                <p class="clipCaption clipInfo">This is the caption.</p>
-                <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" />
+
+        <% @item.in_groups_of(3).each do |group| %>
+          <div class="section group">
+            <% group.each do |i| %>
+              <div class="col col4">
+                <!-- <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/MPIfJ0f19FU" title="Title"> -->
+                <%= link_to(i.url,:class => "fancybox fancybox.iframe", 'data-thumbnail' => "#{i.image.thumb.url}", :rel => "gallery", :title => "Title") do %>
+                  <div class="mediaClip">
+                    <h2 class="clipTitle clipInfo hide">
+                      <%= i.title %>
+                    </h2>
+                    <p class="clipCaption clipInfo">
+                      <%= i.caption %>
+                    </p>
+                    <!-- <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" /> -->
+                    <%= image_tag(i.image.url, :class => "mediaImg") %>
+                  </div>
+                <% end %>
               </div>
-            </a>
+            <% end %>
           </div>
-          <div class="col col4">
-            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/Qpn4mxcHPAw" title="Title">
-              <div class="mediaClip">
-                <h2 class="clipTitle clipInfo hide">Title</h2>
-                <p class="clipCaption clipInfo">This is the caption.</p>
-                <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <div class="col col4">
-            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/Qpn4mxcHPAw" title="Title">
-              <div class="mediaClip">
-                <h2 class="clipTitle clipInfo hide">Title</h2>
-                <p class="clipCaption clipInfo">This is the caption.</p>
-                <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="section group">
-          <div class="col col4">
-            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/Qpn4mxcHPAw" title="Title">
-              <div class="mediaClip">
-                <h2 class="clipTitle clipInfo hide">Title</h2>
-                <p class="clipCaption clipInfo">This is the caption.</p>
-                <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <div class="col col4">
-            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/Qpn4mxcHPAw" title="Title">
-              <div class="mediaClip">
-                <h2 class="clipTitle clipInfo hide">Title</h2>
-                <p class="clipCaption clipInfo">This is the caption.</p>
-                <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <div class="col col4">
-            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/Qpn4mxcHPAw" title="Title">
-              <div class="mediaClip">
-                <h2 class="clipTitle clipInfo hide">Title</h2>
-                <p class="clipCaption clipInfo">This is the caption.</p>
-                <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="section group">
-          <div class="col col4">
-            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/Qpn4mxcHPAw" title="Title">
-              <div class="mediaClip">
-                <h2 class="clipTitle clipInfo hide">Title</h2>
-                <p class="clipCaption clipInfo">This is the caption.</p>
-                <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <div class="col col4">
-            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/Qpn4mxcHPAw" title="Title">
-              <div class="mediaClip">
-                <h2 class="clipTitle clipInfo hide">Title</h2>
-                <p class="clipCaption clipInfo">This is the caption.</p>
-                <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <div class="col col4">
-            <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/Qpn4mxcHPAw" title="Title">
-              <div class="mediaClip">
-                <h2 class="clipTitle clipInfo hide">Title</h2>
-                <p class="clipCaption clipInfo">This is the caption.</p>
-                <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" />
-              </div>
-            </a>
-          </div>
+        <% end %>
         </div>
       </div>
     </div>

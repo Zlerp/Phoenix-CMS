@@ -6,9 +6,13 @@ class PheonixController < ApplicationController
   end
 
   def media
+    @item = Item.all
   end
 
   def about
+  end
+
+  def news
   end
 
 end

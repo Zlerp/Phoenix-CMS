@@ -17,6 +17,10 @@ Rails.application.routes.draw do
 
 	get '/about' => 'pheonix#about', as: 'about'
 
+	get '/news' => 'pheonix#news', as: 'news'
+
+
+
 
 
   # Example of regular route:
