@@ -13,6 +13,7 @@ class PheonixController < ApplicationController
   end
 
   def news
+    @item = Item.all
   end
 
 end

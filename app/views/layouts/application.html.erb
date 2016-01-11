@@ -11,10 +11,10 @@
 <header>
   <div id='cssmenu'>
     <ul>
-       <li class="homeButton"><a href='/'>Home</a></li>
-       <li><a href='/about'>About</a></li>
-       <li><a href='/media'>Media</a></li>
-       <li><a href='/news'>News</a></li>
+       <li class="homeButton"><a href='/' class="navHome">Home</a></li>
+       <li><a href='/about' class="navAbout">About</a></li>
+       <li><a href='/media' class="navMedia">Media</a></li>
+       <li><a href='/news' class="navNews">News</a></li>
 
        <!-- <li><a href='/contact'>Contact</a></li> -->
     </ul>
@@ -25,4 +25,33 @@
 <%= yield %>
 
 </body>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    var pageName = document.location.href.match(/[^\/]+$/);  //Just run the match, no referencing the first index
+    if (!pageName) { //check if there is not a match with a falsey check (could use (pageName===null)
+        $( ".navHome" ).addClass( "selectedPage" );
+    } else {
+        switch (pageName[0]) {
+      case 'news':
+        $( ".navNews" ).addClass( "selectedPage" );
+        console.log("news");
+        break;
+      case 'media':
+        $( ".navMedia" ).addClass( "selectedPage" );
+        console.log("media");
+        break;
+      case 'about':
+        $( ".navAbout" ).addClass( "selectedPage" );
+        console.log("about");
+        break;
+      default:
+        console.log("none");
+       }
+    };
+  });
+
+</script>
 </html>

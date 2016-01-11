@@ -1,0 +1,48 @@
+.backgroundNews {
+
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: url("http://qlook.bz/uploads/camera-man.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -50;
+}
+
+.spacerBar {
+  height: 100vh;
+  width: 100%;
+  // background-color: white;
+}
+
+.blogBody{
+  width: 80%;
+  height: auto;
+  background-color: white;
+  padding: 10px 10px 10px;
+}
+
+.blogItem {
+  background-color: green;
+  height: auto;
+  // opacity: 0;
+}
+
+.blogImage {
+  background-color: red;
+  height: 30vw;
+}
+.blogDescript {
+  background-color: blue;
+  height: 30vw;
+}
+
+.newsTitle {
+  font-size: 3em;
+}
+
+.newsItem {
+  opacity: 0;
+}

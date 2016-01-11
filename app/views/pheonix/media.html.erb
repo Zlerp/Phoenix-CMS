@@ -20,12 +20,6 @@
         </div>
         <div class="col col4 noSmall"></div>
       </div>
-
-
-      <!-- <div class="mediaGallery">
-        <a class="fancybox" href="http://www.wired.com/wp-content/uploads/2015/10/RickAndMorty.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="1_s.jpg" alt="" /></a>
-      </div> -->
-
       <div class="mediaGallery" id="myAnchor">
         <div class="container">
           <p class="mediaInfo">
@@ -38,7 +32,7 @@
             <% group.each do |i| %>
               <div class="col col4">
                 <!-- <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/MPIfJ0f19FU" title="Title"> -->
-                <%= link_to(i.url,:class => "fancybox fancybox.iframe", 'data-thumbnail' => "#{i.image.thumb.url}", :rel => "gallery", :title => "Title") do %>
+                <%= link_to(i.url,:class => "fancybox fancybox.iframe", 'data-thumbnail' => "#{i.image.thumb.url}", :rel => "gallery", :title => "#{i.title}") do %>
                   <div class="mediaClip">
                     <h2 class="clipTitle clipInfo hide">
                       <%= i.title %>

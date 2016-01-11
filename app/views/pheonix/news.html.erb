@@ -5,6 +5,96 @@
     <title></title>
   </head>
   <body>
+    <div class="backgroundNews"></div>
+    <div class="spacerBar"></div>
+    <div class="blogBody hCenterBlock">
 
+      <div class="newsItem">
+        <div class="section group blogTitle">
+          <div class="col col12">
+            <h2 class="newsTitle">Title</h2>
+          </div>
+        </div>
+        <div class="section group blogItem">
+          <div class="col7 col blogImage"></div>
+          <div class="col5 col blogDescript">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsItem">
+        <div class="section group blogTitle">
+          <div class="col col12">
+            <h2 class="newsTitle">Title</h2>
+          </div>
+        </div>
+        <div class="section group blogItem">
+          <div class="col7 col blogImage"></div>
+          <div class="col5 col blogDescript">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsItem">
+        <div class="section group blogTitle">
+          <div class="col col12">
+            <h2 class="newsTitle">Title</h2>
+          </div>
+        </div>
+        <div class="section group blogItem">
+          <div class="col7 col blogImage"></div>
+          <div class="col5 col blogDescript">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsItem">
+        <div class="section group blogTitle">
+          <div class="col col12">
+            <h2 class="newsTitle">Title</h2>
+          </div>
+        </div>
+        <div class="section group blogItem">
+          <div class="col7 col blogImage"></div>
+          <div class="col5 col blogDescript">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
   </body>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+      /* Check the location of each desired element */
+      $('.newsItem').each( function(i){
+
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        /* If the object is completely visible in the window, fade it it */
+        if( bottom_of_window > bottom_of_object - 300 ){
+
+          $(this).animate({'opacity':'1'},500);
+        }
+      });
+    });
+  });
+  </script>
 </html>

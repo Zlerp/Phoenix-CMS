@@ -4,6 +4,7 @@ $yellow: #e0e31a;
 $lGrey : #66696e;
 $dGrey : #4a4a4f;
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 
 @import "reset";
@@ -17,7 +18,7 @@ $dGrey : #4a4a4f;
 
 
 
-
+@import "news";
 @import "contact";
 @import "enterButton";
 @import "downArrow";
@@ -25,6 +26,10 @@ $dGrey : #4a4a4f;
 
 body{
   background: white;
+}
+
+html * {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .drawer {
