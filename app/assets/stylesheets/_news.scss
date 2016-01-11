@@ -25,7 +25,6 @@
 }
 
 .blogItem {
-  background-color: green;
   height: auto;
   // opacity: 0;
 }
@@ -37,12 +36,18 @@
 .blogDescript {
   background-color: blue;
   height: 30vw;
+  padding: 10px 10px 10px 10px;
 }
 
 .newsTitle {
   font-size: 3em;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
 }
 
 .newsItem {
   opacity: 0;
+  border-bottom: 2px solid $dGrey;
+  padding-bottom: 10px;
 }

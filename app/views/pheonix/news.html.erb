@@ -8,73 +8,27 @@
     <div class="backgroundNews"></div>
     <div class="spacerBar"></div>
     <div class="blogBody hCenterBlock">
-
-      <div class="newsItem">
-        <div class="section group blogTitle">
-          <div class="col col12">
-            <h2 class="newsTitle">Title</h2>
+      <% @item.each do |i| %>
+        <div class="newsItem">
+          <div class="section group blogTitle">
+            <div class="col col12">
+              <h2 class="newsTitle">
+                <%= i.title %>
+              </h2>
+            </div>
+          </div>
+          <div class="section group blogItem">
+            <%= link_to(i.url,:class => "fancybox fancybox.iframe", 'data-thumbnail' => "#{i.image.thumb.url}", :rel => "gallery", :title => "#{i.title}") do %>
+              <div class="col7 col blogImage"></div>
+            <% end %>
+            <div class="col5 col blogDescript">
+              <p>
+                <%= i.description %>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="section group blogItem">
-          <div class="col7 col blogImage"></div>
-          <div class="col5 col blogDescript">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="newsItem">
-        <div class="section group blogTitle">
-          <div class="col col12">
-            <h2 class="newsTitle">Title</h2>
-          </div>
-        </div>
-        <div class="section group blogItem">
-          <div class="col7 col blogImage"></div>
-          <div class="col5 col blogDescript">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="newsItem">
-        <div class="section group blogTitle">
-          <div class="col col12">
-            <h2 class="newsTitle">Title</h2>
-          </div>
-        </div>
-        <div class="section group blogItem">
-          <div class="col7 col blogImage"></div>
-          <div class="col5 col blogDescript">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="newsItem">
-        <div class="section group blogTitle">
-          <div class="col col12">
-            <h2 class="newsTitle">Title</h2>
-          </div>
-        </div>
-        <div class="section group blogItem">
-          <div class="col7 col blogImage"></div>
-          <div class="col5 col blogDescript">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-
+      <% end %>
     </div>
   </body>
 
@@ -95,6 +49,28 @@
         }
       });
     });
+
+
+    $('.fancybox').fancybox({
+      helpers:  {
+          title : {
+              type : 'inside'
+          },
+          overlay : {
+              css : {
+                  'background' : 'rgba(0,0,0,.4)'
+              }
+          },
+          thumbs : {
+              width: 50,
+              height: 50,
+              source  : function(current) {
+                return $(current.element).data('thumbnail');
+              }
+          }
+      }
+    });
+
   });
   </script>
 </html>
