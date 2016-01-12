@@ -13,7 +13,17 @@
   margin: 0 auto;
 }
 
+
+.horizontal {
+  display: flex;
+  justify-content: center;
+}
 // VERTICAL
+.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 @mixin vAlign($position: relative) {
   position: $position;

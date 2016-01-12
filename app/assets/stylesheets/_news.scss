@@ -51,3 +51,14 @@
   border-bottom: 2px solid $dGrey;
   padding-bottom: 10px;
 }
+
+.blogImage {
+  overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-size: 100% auto!important;
+  // max-width: 1920px; /* YOUR BG MAX SIZE */
+  // background-size: 100%;
+}

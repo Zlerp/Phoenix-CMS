@@ -19,7 +19,9 @@
           </div>
           <div class="section group blogItem">
             <%= link_to(i.url,:class => "fancybox fancybox.iframe", 'data-thumbnail' => "#{i.image.thumb.url}", :rel => "gallery", :title => "#{i.title}") do %>
-              <div class="col7 col blogImage"></div>
+              <div class="col7 col blogImage"style="background: url(<%= i.image.url %>) no-repeat center center; ">
+                <!-- <% image_tag(i.image.url, :class => "newsImg") %> -->
+              </div>
             <% end %>
             <div class="col5 col blogDescript">
               <p>
@@ -45,7 +47,7 @@
         /* If the object is completely visible in the window, fade it it */
         if( bottom_of_window > bottom_of_object - 300 ){
 
-          $(this).animate({'opacity':'1'},500);
+          $(this).animate({'opacity':'1'},700);
         }
       });
     });
