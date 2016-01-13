@@ -12,15 +12,15 @@
 			<th>&nbsp;</th>
 		</tr>
 	</thead>
-	
+
 	<% items.each do |item| %>
 		<tr>
 			<td><%= casein_table_cell_link item.title, casein_item_path(item) %></td>
-			<td><%= casein_table_cell_link item.caption, casein_item_path(item) %></td>
-			<td><%= casein_table_cell_link item.url, casein_item_path(item) %></td>
-			<td><%= casein_table_cell_link item.description, casein_item_path(item) %></td>
+			<td><%= casein_table_cell_link truncate((item.caption), :length => 20), casein_item_path(item) %></td>
+			<td><%= casein_table_cell_link truncate((item.url), :length =>20), casein_item_path(item) %></td>
+			<td><%= casein_table_cell_link truncate((item.description), :length => 20), casein_item_path(item) %></td>
 			<td><%= casein_table_cell_link item.order, casein_item_path(item) %></td>
-			<td><%= casein_table_cell_link item.image, casein_item_path(item) %></td>
+			<td><%= casein_table_cell_link truncate((item.image.to_s), :length => 20), casein_item_path(item) %></td>
 			<td class="delete">
 				<%= link_to(casein_show_row_icon("trash"), casein_item_path(item), :method => :delete, :data => { :confirm => "Are you sure you want to delete this item?" }) %>
 			</td>
