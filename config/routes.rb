@@ -19,6 +19,9 @@ Rails.application.routes.draw do
 
 	get '/news' => 'pheonix#news', as: 'news'
 
+	get '/commercials' => 'pheonix#commercials', as: 'commercials'
+
+
 
 
 

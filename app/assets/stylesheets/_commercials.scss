@@ -1,0 +1,94 @@
+.mediaContainer {
+  width: 100%;
+  margin: 0;
+  // background-color: red;
+  // height: 100vh;
+  height: auto;
+  padding-top: 52px;
+  overflow: hidden;
+
+}
+.mediaGrid{
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+.commercialTitle{
+  color: white;
+  left: 0;
+  position:absolute;
+  text-align:center;
+  top: 40%;
+  width: 100%;
+  z-index: 20;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transition-property: all;
+  transition: visibility 0s, opacity .5s linear;
+
+}
+
+#commercialPic{
+  opacity: .9;
+  -webkit-filter:  sepia(.3) contrast(1.1) brightness(1.1) grayscale(1);
+  filter: sepia(.3) contrast(1.1) brightness(1.1) grayscale(1);
+  -webkit-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-property: all;
+
+}
+
+.mediaGrid:hover{
+
+  #commercialPic{
+    opacity: 1;
+    -ms-transform: rotate(7deg) scale(1.2); /* IE 9 */
+    -webkit-transform: rotate(7deg) scale(1.2); /* Chrome, Safari, Opera */
+    transform: rotate(7deg) scale(1.2);
+    -webkit-filter:  sepia(0) contrast(1) brightness(1) grayscale(0);
+    filter: sepia(0) contrast(1) brightness(1) grayscale(0);
+
+  }
+
+  .commercialTitle{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
+
+// sm
+@media screen and (min-width: 35.5em){
+  .mediaGrid {
+    max-height: 50vh!important;
+  }
+}
+
+// md
+@media screen and (min-width: 48em){
+  .mediaGrid {
+    max-height: 50vh!important;
+  }
+}
+
+// lg
+@media screen and (min-width: 64em){
+  max-height: 50vh!important;
+
+}
+
+// xl
+@media screen and (min-width: 80em){
+    max-height: 50vh!important;
+
+}

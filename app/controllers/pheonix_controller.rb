@@ -16,4 +16,8 @@ class PheonixController < ApplicationController
     @item = Item.all
   end
 
+  def commercials
+    @item = Item.all
+  end
+
 end
