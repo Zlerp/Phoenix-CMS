@@ -12,12 +12,12 @@
   border-radius: 5px;
   width: 70%;
   max-width: 1200px;
-  -webkit-transform: translate(-50%, -200%);
-  -ms-transform: translate(-50%, -200%);
-  transform: translate(-50%, -200%);
-  transition: transform 500ms ease-out;
-  -webkit-transition: transform 500ms ease-out;
-  -ms-transition: transform 500ms ease-out;
+  -webkit-transform: translate(-50%, -300%);
+  -ms-transform: translate(-50%, -300%);
+  transform: translate(-50%, -300%);
+  transition: transform 300ms ease-in-out;
+  -webkit-transition: transform 300ms ease-in-out;
+  -ms-transition: transform 300ms ease-in-out;
   letter-spacing: normal;
 
   //

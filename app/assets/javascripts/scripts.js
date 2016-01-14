@@ -13,6 +13,35 @@ $(document).ready(function() {
   //   }
   //   );
 
+
+  $(".pure-img").rotate({
+      bind: {
+          click: function(){
+                    $(this).rotate({
+                        angle: 0,
+                        animateTo: 100,
+                        duration: 3000
+                    });
+                    // setTimeout(function(){
+                    //     $("#image").stopRotate();
+                    // }, 1000);
+          }
+     }
+ });
+
+ ('.pure-img').hover(
+   function () {
+     $(this).show();
+   },
+   function () {
+     $(this).hide();
+   }
+ );
+
+
+
+ $( selector ).mouseenter( handlerIn ).mouseleave( handlerOut );
+
   ('.mediaClip').hover(
     function () {
       $(".clipTitle").show();
