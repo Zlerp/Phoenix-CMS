@@ -40,14 +40,14 @@
   opacity: .9;
   -webkit-filter:  sepia(.3) contrast(1.1) brightness(1.1) grayscale(1);
   filter: sepia(.3) contrast(1.1) brightness(1.1) grayscale(1);
-  -ms-transform: rotate(3deg) scale(1.2); /* IE 9 */
-  -webkit-transform: rotate(3deg) scale(1.2); /* Chrome, Safari, Opera */
-  transform: rotate(3deg) scale(1.2);
-  -webkit-transition-duration: 2s;
-  transition-duration: 2s;
+  -ms-transform: rotate(2deg) scale(1.2); /* IE 9 */
+  -webkit-transform: rotate(2deg) scale(1.2); /* Chrome, Safari, Opera */
+  transform: rotate(2deg) scale(1.2);
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
   -webkit-transition-property: all;
-
 }
+
 
 .mediaGrid:hover{
 
@@ -66,7 +66,6 @@
     opacity: 1;
   }
 }
-
 
 
 

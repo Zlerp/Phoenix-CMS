@@ -1,0 +1,66 @@
+
+// MODAL
+
+
+
+.modal-container {
+  z-index: 900;
+  position: fixed;
+  background-color: $orange;
+  left: 50%;
+  padding: 20px;
+  border-radius: 5px;
+  width: 70%;
+  max-width: 1200px;
+  -webkit-transform: translate(-50%, -200%);
+  -ms-transform: translate(-50%, -200%);
+  transform: translate(-50%, -200%);
+  transition: transform 500ms ease-out;
+  -webkit-transition: transform 500ms ease-out;
+  -ms-transition: transform 500ms ease-out;
+  letter-spacing: normal;
+
+  //
+  // p {
+  //   margin-top: 0px;
+  // }
+  // a { vertical-align: middle; }
+}
+
+// to get the to show we want to apply on the modal the
+// target selector, then in the modal we want to
+// reveal the modal container.
+// that matches to the modal class id, and because theres a
+// target selector on the modal,
+//  we stall modal container to have the attributes in it.
+.modal:target .modal-container {
+  top: 20%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.modal:target:before{
+  display: block;
+}
+
+
+
+// This Fixes the dark background color to click to exit
+// takes full width and height of page
+.modal:before {
+  content: "";
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, .75);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+
+}
+
+// left empty so that it stays in the right location on close
+
+#modal-close{}
