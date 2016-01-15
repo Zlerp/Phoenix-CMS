@@ -18,6 +18,7 @@
 //= require jquery.fancybox-media
 //= require jquery.fancybox-thumbs
 //= require navbar
+//= require iframe
 //= require pace.min
 // require vivus.min
 //= require snap.svg-min
