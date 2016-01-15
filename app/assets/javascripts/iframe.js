@@ -14,6 +14,5 @@ $(document).ready(function(){
     $('.modal-Title').text(title);
     $('.modal-Desc').text(desc);
     $('#modal-iframe').attr('src',urlLink);
-
   });
 });

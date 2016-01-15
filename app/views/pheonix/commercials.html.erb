@@ -5,34 +5,35 @@
     <title></title>
   </head>
   <body>
-    <div class="spacer"></div>
-    <div class="mediaContainer pure-g">
-      <div class="modal" id="openModal">
-          <div class="modal-container">
-            <div class="iconHolder">
-              <a href="#modal-close">
-                <%= render_svg("x-icon.svg")%>
-              </a>
-            </div>
-            <div class="pure-g">
-              <div class="pure-u-2-24 sidePiece"></div>
-              <div class="centrPeice pure-u-20-24">
-                <div class="pure-g">
-                  <div class="embed-container">
-                    <iframe src="" id="modal-iframe"></iframe>
-                  </div>
-                  <h3 class="modal-Title">
-                  </h3>
-                  <p class="modal-Desc">
-                  </p>
+    <div class="modal" id="openModal">
+        <div class="modal-container">
+          <div class="iconHolder">
+            <a href="#modal-close">
+              <%= render_svg("x-icon.svg")%>
+            </a>
+          </div>
+          <div class="pure-g">
+            <div class="pure-u-2-24 sidePiece"></div>
+            <div class="centrPeice pure-u-20-24">
+              <div class="pure-g">
+                <div class="embed-container">
+                  <iframe src="" id="modal-iframe"></iframe>
                 </div>
-
+                <h3 class="modal-Title">
+                </h3>
+                <p class="modal-Desc">
+                </p>
               </div>
-              <div class="pure-u-2-24 sidePiece"></div>
 
             </div>
+            <div class="pure-u-2-24 sidePiece"></div>
+
           </div>
         </div>
+      </div>
+    <div class="spacer"></div>
+    <div class="mediaContainer pure-g">
+
 <!-- seperate iframe modals -->
 
       <!-- <% @item.each_with_index do |item, i| %>
