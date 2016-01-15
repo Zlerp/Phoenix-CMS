@@ -19,6 +19,8 @@
 //= require jquery.fancybox-thumbs
 //= require navbar
 //= require pace.min
+// require vivus.min
+//= require snap.svg-min
 //= require modernizr.custom.js
 //= require classie.js
 //= require uiMorphingButton_inflow.js

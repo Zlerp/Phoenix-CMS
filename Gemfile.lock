@@ -194,6 +194,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick (~> 4.3)
+  nokogiri (~> 1.6, >= 1.6.7.1)
   pg
   pry
   rails (= 4.2.4)

@@ -1,0 +1,13 @@
+  <svg id="x-icon-outline" class="x-icon-class" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.5 95.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>x-icon-outline</title>
+  <path d="M51.17,3.92A47.25,47.25,0,1,0,98.42,51.17,47.25,47.25,0,0,0,51.17,3.92ZM74.32,67.7L67.7,74.32,51.17,57.78,34.63,74.32,28,67.7,44.55,51.17,28,34.63,34.63,28,51.17,44.55,67.7,28l6.61,6.61L57.78,51.17Z" transform="translate(-3.42 -3.42)"/>
+</svg>

@@ -26,6 +26,9 @@ gem 'casein', '~>5.1.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pg'
+
+gem 'nokogiri', '~> 1.6', '>= 1.6.7.1'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

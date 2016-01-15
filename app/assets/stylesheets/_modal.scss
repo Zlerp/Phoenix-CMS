@@ -36,7 +36,7 @@
 // target selector on the modal,
 //  we stall modal container to have the attributes in it.
 .modal:target .modal-container {
-  top: 20%;
+  top: 15%;
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
@@ -75,10 +75,4 @@
   position: relative;
   width: 100%;
   height: auto;
-}
-
-#x-icon{
-  height: 40px;
-  width: 40px;
-  float: right;
 }
