@@ -15,4 +15,11 @@ $(document).ready(function(){
     $('.modal-Desc').text(desc);
     $('#modal-iframe').attr('src',urlLink);
   });
+
+
+  // var icons = new Vivus('fb-icon', {type: 'delayed', duration: 50, start: 'inViewport', dashGap: 50}, function () {
+  //       if (window.console) {
+  //         console.log('Animation finished. [log triggered from callback]');
+  //       }
+  //     });
 });

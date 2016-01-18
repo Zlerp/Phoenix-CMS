@@ -1,5 +1,6 @@
 class PheonixController < ApplicationController
   def index
+    @disable_foot = true
   end
 
   def contact

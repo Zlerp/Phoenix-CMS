@@ -67,7 +67,7 @@
         <% end %>
       <% end %> -->
       <% @item.each_with_index do |item, i| %>
-        <div class="mediaGrid pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-xl-4">
+        <div class="mediaGrid pure-u-1-1 pure-u-md-1-3 pure-u-lg-1-4">
           <%= link_to("#openModal") do %>
             <%= image_tag(item.image.url, :class => "pure-img", :id => "commercialPic") %>
             <h3 class="commercialTitle">

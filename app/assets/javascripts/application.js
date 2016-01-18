@@ -22,6 +22,7 @@
 //= require pace.min
 // require vivus.min
 //= require snap.svg-min
+//= require svg
 //= require modernizr.custom.js
 //= require classie.js
 //= require uiMorphingButton_inflow.js
