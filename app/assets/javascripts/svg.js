@@ -1,18 +1,45 @@
-// $(document).ready(function(){
-//   var s = Snap(".social-circle");
 //
-//   var innerCircle = s.attr({
-//     fill: "none",
-//     stroke: 'black',
-//     strokeWidth: 10,
-//     strokeDasharray: "300",
+// //
+// $(document).ready(function() {
+//   $('svg').find('circle').fadeOut( 0 );
+//
+//   var transDur = $('svg').find('.removingCirc').valueOf().css('transition-duration');
+//   console.log(transDur);
+//   $('svg').hover(function() {
+//     /* Stuff to do when the mouse enters the element */
+//       $(this).find('circle').fadeIn( 100 );
+//       $(this).find('circle').attr("class", "social-circle movingCirc");
+//
+//       console.log('on');
+//   }, function() {
+//     /* Stuff to do when the mouse leaves the element */
+//     $(this).find('circle').attr("class", "social-circle removingCirc");
+//     $(this).find('circle').delay( 999 ).fadeOut( 0 );
+//     console.log("hover off");
 //   });
-//
-//   Snap.animate(100,3000, function( value ){
-//    innerCircle.attr({ 'strokeDashoffset': value });
-//
-//  },10000 );
-//
-//
-//
 // });
+
+
+$(function() {
+  $('svg').hover(function() {
+    // var pathLen = $(this).find('circle')[0].getTotalLength();
+
+    // var path = document.querySelector(this).find('circle');
+    // var length = path.getTotalLength();
+    // console.log(length);
+    /* Stuff to do when the mouse enters the element */
+    $(this).find('.social-circle')
+      .stop()
+      .animate({'stroke-dashoffset': 0}, 1000, 'easeOutBounce');
+      // .css('fill', '#f4321e');
+      console.log('on');
+  }, function() {
+    /* Stuff to do when the mouse leaves the element */
+    $(this).find('.social-circle')
+      .stop()
+      .animate({
+        'stroke-dashoffset': 900
+      }, 1000, 'easeOutBounce');
+      // .css('fill', 'none');
+  });
+});

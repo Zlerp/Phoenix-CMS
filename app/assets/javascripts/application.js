@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+// require jquery-ui.min
 // require turbolinks
 //= require jquery.fancybox
 //= require jquery.fancybox-buttons

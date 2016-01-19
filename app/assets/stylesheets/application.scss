@@ -10,13 +10,54 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require style
- *= require media
- *= require jquery.fancybox
- *= require jquery.fancybox-buttons
- *= require jquery.fancybox-thumbs
- *= require_self
+ * require style
+ * require media
+ * require jquery.fancybox
+ * require jquery.fancybox-buttons
+ * require jquery.fancybox-thumbs
+ * require_self
  */
+
+  @import "bourbon";
+
+  $orange: #f1b521;
+  $yellow: #e0e31a;
+  $lGrey : #66696e;
+  $dGrey : #4a4a4f;
+
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+  @import url(https://fonts.googleapis.com/css?family=Lato:400,900,700,300,100,300italic);
+
+  @import "reset";
+  @import "progressBar";
+  @import "grid";
+  // @import "grids-responsive-min";
+
+
+  @import "style";
+  @import "media";
+  @import "jquery.fancybox";
+  @import "jquery.fancybox-buttons";
+  @import "jquery.fancybox-thumbs";
+  @import "centering";
+
+
+  @import "nav-bar";
+  @import "background";
+
+
+
+  @import "news";
+  @import "contact";
+  @import "commercials";
+  @import "footer";
+  @import "modal";
+  @import "modal-style";
+  @import "enterButton";
+  @import "svgs/*";
+  @import "downArrow";
+  @import "morphing";
+
 .fancybox-type-iframe .fancybox-nav {
     width: 60px;
 }

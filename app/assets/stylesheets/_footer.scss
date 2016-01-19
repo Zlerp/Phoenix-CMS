@@ -90,15 +90,9 @@
         a {
           display: block;
           .social-icons {
-            fill:none;
-            stroke:#000000;
             stroke-width:10;
             stroke-linecap:square;
             stroke-miterlimit:5;
-          }
-          svg{
-            height: 60px;
-            width: 60px;
           }
         }
       }

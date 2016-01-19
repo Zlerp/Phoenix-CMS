@@ -8,61 +8,100 @@
 
 }
 
+ // FOOTER SVG ICONS
 
-// #fb-icon {
-//   .social-circle{
-//     fill: white;
-//   }
-//
-//   .social-path{
-//     stroke-width: 10;
-//     stroke: #2988d6;
-//     fill: none;
-//     stroke-dasharray: 900;
-//     stroke-dashoffset: 900;
-//     -webkit-animation: outline 3s linear forwards;
-//     -o-animation: outline 3s linear forwards;
-//     -moz-animation: outline 3s linear forwards;
-//     animation: outline 3s linear forwards;
-//   }
-// }
-//
-// #fbLink:hover{
-//   .social-circle{
-//     transition: 1s;
-//     fill: #2988d6;
-//     stroke: #003566;
-//     stroke-width: 10;
-//     // stroke-dasharray: 600;
-//     // stroke-dashoffset: 600;
-//     -webkit-animation: dash 1s linear;
-//     -o-animation: dash 1s linear;
-//     -moz-animation: dash 1s linear;
-//     animation: dash 1s linear;
-//   }
-//
-//   .social-path{
-//     fill: #2988d6;
-//     stroke: white;
-//   }
-//
-// }
-//
-//
-//
-//
-//   @-webkit-keyframes dash{
-//     from {
-//       stroke-dashoffset: 600;
-//     } to {
-//       stroke-dashoffset: 0;
-//     }
-//   }
-//
-//   @-webkit-keyframes outline{
-//     from {
-//       stroke-dashoffset: 900;
-//     } to {
-//       stroke-dashoffset: 0;
-//     }
-//   }
+svg{
+  height: 60px;
+  width: 60px;
+
+
+  .social-path, .social-circle {
+    fill: none;
+    stroke-width: 10;
+
+  }
+  .social-circle {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+
+  }
+  .social-path {
+    stroke-dasharray: 700;
+    -webkit-animation: dash 4s linear infinite;
+    animation: dash 4s linear infinite;
+  }
+}
+
+
+// ICON ANIMATION KEYFRAMES
+
+
+  @keyframes dash {
+   from{
+     stroke-dashoffset:615;
+   }
+   to{
+      stroke-dashoffset: 0;
+    }
+  }
+
+// icon colors
+  #fb-icon {
+    circle {
+      stroke: $facebook;
+    }
+
+    path {
+      stroke: $facebook;
+    }
+  }
+
+  #ig-icon {
+    circle {
+      stroke: $instagram;
+    }
+
+    path {
+      stroke: $instagram;
+    }
+  }
+
+  #vimeo-icon {
+    circle {
+      stroke: $vimeo;
+    }
+
+    path {
+      stroke: $vimeo;
+    }
+  }
+
+  #vine-icon {
+    circle {
+      stroke: $vine;
+    }
+
+    path {
+      stroke: $vine;
+    }
+  }
+
+  #yt-icon {
+    circle {
+      stroke: $youtube;
+    }
+
+    path {
+      stroke: $youtube;
+    }
+  }
+
+  #tw-icon{
+    circle {
+      stroke: $twitter;
+    }
+
+    path {
+      stroke: $twitter;
+    }
+  }
