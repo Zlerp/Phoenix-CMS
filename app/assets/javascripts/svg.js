@@ -53,29 +53,66 @@ $(function() {
            var path = $(this).get(0);
            var pathLen = path.getTotalLength();
            $(this).animate({'stroke-dashoffset': 0}, 3000, 'easeOutBounce');
-           console.log(pathLen);
+          //  console.log(pathLen);
          // }, 300);
        });
      }
   });
 
+  var fbColor = '#5D7DC0',
+      ytColor = '#FF9999',
+      vnColor = '#ADFFEB',
+      twColor = '#C2EFFF',
+      igColor = '#9FBAD0',
+      vmColor = '#DFEFBD';
 
 
   $('svg').hover(function() {
     /* Stuff to do when the mouse enters the element */
-    $(this).find('.social-circle')
-      .stop()
+    var currentID = $(this).prop('id');
+    var currentCirc = $(this).find('.social-circle');
+    var currentPath = $(this).find('.social-path');
+    var circFill ="";
+    switch (currentID) {
+      case 'fb-icon':
+          circFill = fbColor;
+        break;
+      case 'ig-icon':
+          circFill = igColor;
+        break;
+      case 'tw-icon':
+          circFill = twColor;
+        break;
+      case 'yt-icon':
+          circFill = ytColor;
+        break;
+      case 'vine-icon':
+          circFill = vnColor;
+        break;
+      case 'vimeo-icon':
+          circFill = vmColor;
+        break;
+      default:
+        console.log(none);
+    }
+      currentCirc.stop()
       .animate({'stroke-dashoffset': 0}, 1000, 'easeOutBounce');
-      // .css('fill', '#f4321e');
-      console.log('on');
+      TweenLite.to(currentCirc, 1, {fill:circFill});
+      $( ".social-path" ).not( currentPath ).each(function() {
+        TweenLite.to($(this), 0.4, {opacity: 0.2});
+      });
   }, function() {
     /* Stuff to do when the mouse leaves the element */
-    $(this).find('.social-circle')
-      .stop()
+    var currentCirc = $(this).find('.social-circle');
+    var currentPath = $(this).find('.social-path');
+      currentCirc.stop()
       .animate({
         'stroke-dashoffset': 900
       }, 1000, 'easeOutBounce');
-      // .css('fill', 'none');
+      TweenLite.to(currentCirc, 1, {fill:'none'});
+      $( ".social-path" ).not( currentPath ).each(function() {
+        TweenLite.to($(this), 0.6, {opacity: 1});
+      });
   });
 
 
