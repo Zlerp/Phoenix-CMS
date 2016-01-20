@@ -20,9 +20,10 @@
 //= require jquery.fancybox-thumbs
 //= require navbar
 //= require iframe
+//= require skrollr.min
 //= require pace.min
 // require vivus.min
-//= require snap.svg-min
+// require snap.svg-min
 //= require svg
 //= require modernizr.custom.js
 //= require classie.js

@@ -20,13 +20,49 @@
 // });
 
 
-$(function() {
-  $('svg').hover(function() {
-    // var pathLen = $(this).find('circle')[0].getTotalLength();
+// FIND PATH LENGTH WITH JS
+// var path = $(".svg").get(0);
+// var pathLen = path.getTotalLength();
+// console.log(pathLen);
 
-    // var path = document.querySelector(this).find('circle');
-    // var length = path.getTotalLength();
-    // console.log(length);
+
+$(function() {
+
+  // var pathFB = $('#fb-icon').find('path').get(0);
+  // var lengthFB = pathFB.getTotalLength();
+  // var pathIG = $('#ig-icon').find('path').get(0);
+  // var lengthIG = pathIG.getTotalLength();
+  // var pathYT = $('#yt-icon').find('path').get(0);
+  // var lengthYT = pathYT.getTotalLength();
+  // var pathVimeo = $('#vimeo-icon').find('path').get(0);
+  // var lengthVimeo = pathVimeo.getTotalLength();
+  // var pathVine = $('#vine-icon').find('path').get(0);
+  // var lengthVine = pathVine.getTotalLength();
+  // var pathTW = $('#tw-icon').find('path').get(0);
+  // var lengthTW = pathTW.getTotalLength();
+  // console.log("FB: " + lengthFB + '\n' + 'IG: ' +lengthIG + '\n' + 'YT: ' + lengthYT + '\n' + 'Vimeo: ' + lengthVimeo + '\n' + 'Vine: ' + lengthVine + '\n' + 'TW: ' + lengthTW);
+
+  // var path = $(this).find('path.social-path').get(0);
+  // var pathLen = path.getTotalLength();
+  // console.log(pathLen);
+
+  $(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() > $(document).height()) {
+       $('.social-path').each(function() {
+         // setTimeout(function() {
+
+           var path = $(this).get(0);
+           var pathLen = path.getTotalLength();
+           $(this).animate({'stroke-dashoffset': 0}, 3000, 'easeOutBounce');
+           console.log(pathLen);
+         // }, 300);
+       });
+     }
+  });
+
+
+
+  $('svg').hover(function() {
     /* Stuff to do when the mouse enters the element */
     $(this).find('.social-circle')
       .stop()
@@ -42,4 +78,8 @@ $(function() {
       }, 1000, 'easeOutBounce');
       // .css('fill', 'none');
   });
+
+
+
+
 });

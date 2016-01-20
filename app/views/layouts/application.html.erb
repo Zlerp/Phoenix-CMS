@@ -35,6 +35,7 @@
 <script type="text/javascript">
 
   $(document).ready(function() {
+    var s = skrollr.init();
 
     var pageName = document.location.href.match(/[^\/]+$/);  //Just run the match, no referencing the first index
     if (!pageName) { //check if there is not a match with a falsey check (could use (pageName===null)

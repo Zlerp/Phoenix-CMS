@@ -11,8 +11,8 @@
  // FOOTER SVG ICONS
 
 svg{
-  height: 60px;
-  width: 60px;
+  height: 90px;
+  width: 90px;
 
 
   .social-path, .social-circle {
@@ -24,11 +24,11 @@ svg{
     stroke-dasharray: 900;
     stroke-dashoffset: 900;
 
+
   }
   .social-path {
-    stroke-dasharray: 700;
-    -webkit-animation: dash 4s linear infinite;
-    animation: dash 4s linear infinite;
+    // -webkit-animation: dash 4s linear infinite;
+    // animation: dash 4s linear infinite;
   }
 }
 
@@ -36,14 +36,14 @@ svg{
 // ICON ANIMATION KEYFRAMES
 
 
-  @keyframes dash {
-   from{
-     stroke-dashoffset:615;
-   }
-   to{
-      stroke-dashoffset: 0;
-    }
-  }
+  // @keyframes dash {
+  //  from{
+  //    stroke-dashoffset:615;
+  //  }
+  //  to{
+  //     stroke-dashoffset: 0;
+  //   }
+  // }
 
 // icon colors
   #fb-icon {
@@ -53,6 +53,8 @@ svg{
 
     path {
       stroke: $facebook;
+      stroke-dasharray: 614 ;
+      stroke-dashoffset: 614 ;
     }
   }
 
@@ -63,6 +65,8 @@ svg{
 
     path {
       stroke: $instagram;
+      stroke-dasharray: 680 ;
+      stroke-dashoffset: 680 ;
     }
   }
 
@@ -73,6 +77,8 @@ svg{
 
     path {
       stroke: $vimeo;
+      stroke-dasharray: 813 ;
+      stroke-dashoffset: 813 ;
     }
   }
 
@@ -83,6 +89,8 @@ svg{
 
     path {
       stroke: $vine;
+      stroke-dasharray: 1070 ;
+      stroke-dashoffset: 1070 ;
     }
   }
 
@@ -93,6 +101,8 @@ svg{
 
     path {
       stroke: $youtube;
+      stroke-dasharray: 560 ;
+      stroke-dashoffset: 560 ;
     }
   }
 
@@ -103,5 +113,14 @@ svg{
 
     path {
       stroke: $twitter;
+      stroke-dasharray: 819 ;
+      stroke-dashoffset: 819 ;
     }
   }
+
+//   FB: 614.8359375
+// IG: 1487.576171875
+// YT: 713.741943359375
+// Vimeo: 813.818603515625
+// Vine: 1070.095947265625
+// TW: 819.3269653320312
