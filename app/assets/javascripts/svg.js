@@ -47,10 +47,9 @@ $(function() {
   // console.log(pathLen);
 
   $(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() > $(document).height()) {
+   if($(window).scrollTop() + $(window).height() > $(document).height()-100) {
        $('.social-path').each(function() {
          // setTimeout(function() {
-
            var path = $(this).get(0);
            var pathLen = path.getTotalLength();
            $(this).animate({'stroke-dashoffset': 0}, 3000, 'easeOutBounce');
