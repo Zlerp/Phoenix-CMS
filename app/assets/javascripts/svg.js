@@ -46,6 +46,14 @@ $(function() {
   // var pathLen = path.getTotalLength();
   // console.log(pathLen);
 
+  var $fbColor = '#A7B8DD',
+      $ytColor = '#FF9999',
+      $vnColor = '#ADFFEB',
+      $twColor = '#C2EFFF',
+      $igColor = '#ADC4D7',
+      $vmColor = '#DFEFBD';
+
+
   $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() > $(document).height()-100) {
        $('.social-path').each(function() {
@@ -59,12 +67,9 @@ $(function() {
      }
   });
 
-  var fbColor = '#5D7DC0',
-      ytColor = '#FF9999',
-      vnColor = '#ADFFEB',
-      twColor = '#C2EFFF',
-      igColor = '#9FBAD0',
-      vmColor = '#DFEFBD';
+
+
+
 
 
   $('svg').hover(function() {
@@ -75,22 +80,22 @@ $(function() {
     var circFill ="";
     switch (currentID) {
       case 'fb-icon':
-          circFill = fbColor;
+          circFill = $fbColor;
         break;
       case 'ig-icon':
-          circFill = igColor;
+          circFill = $igColor;
         break;
       case 'tw-icon':
-          circFill = twColor;
+          circFill = $twColor;
         break;
       case 'yt-icon':
-          circFill = ytColor;
+          circFill = $ytColor;
         break;
       case 'vine-icon':
-          circFill = vnColor;
+          circFill = $vnColor;
         break;
       case 'vimeo-icon':
-          circFill = vmColor;
+          circFill = $vmColor;
         break;
       default:
         console.log(none);

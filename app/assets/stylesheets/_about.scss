@@ -1,0 +1,47 @@
+.aboutContainer {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.aboutTitle {
+  width: 100%;
+  padding-top: 100px;
+  text-align: center;
+
+  h3 {
+    @include tShadow;
+    font-size: 40px;
+    font-weight: 900;
+  }
+}
+
+
+.aboutInfo {
+    height: 95vh;
+    background-color: white;
+    width: 100%;
+    position: relative;
+    p, h3 {
+      letter-spacing: normal;
+    }
+
+    .aboutP {
+      padding-top: 100px;
+      height: auto;
+      width: 60%;
+      // max-width: 700px;
+      background-color: blue;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+  }
+
+.workOn {
+  height: auto;
+  width: 100%;
+}
+  .workObject {
+    height: 300px;
+    background-color: red;
+  }
