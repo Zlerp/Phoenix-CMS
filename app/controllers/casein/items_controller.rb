@@ -2,29 +2,37 @@
 
 module Casein
   class ItemsController < Casein::CaseinController
-  
+      before_action :itemCount, only: [:show, :new, :update]
+
     ## optional filters for defining usage according to Casein::AdminUser access_levels
     # before_filter :needs_admin, :except => [:action1, :action2]
     # before_filter :needs_admin_or_current_user, :only => [:action1, :action2]
-  
+
     def index
       @casein_page_title = 'Items'
-  		@items = Item.order(sort_order(:title)).paginate :page => params[:page]
+      # @items = Item.order(sort_order(:url)).paginate :page => params[:page]
+      @items = Item.ordered.paginate :page => params[:page]
     end
-  
+
     def show
       @casein_page_title = 'View item'
       @item = Item.find params[:id]
+      @itemCount = Item.count
+      @order_collection = (1..(@itemCount + 1)).to_a - Item.all.pluck(:order)
     end
-  
+
     def new
       @casein_page_title = 'Add a new item'
     	@item = Item.new
+      @itemCount = Item.count
+      @order_collection = (1..(@itemCount + 1)).to_a - Item.all.pluck(:order)
+
+
     end
 
     def create
       @item = Item.new item_params
-    
+
       if @item.save
         flash[:notice] = 'Item created'
         redirect_to casein_items_path
@@ -33,12 +41,11 @@ module Casein
         render :action => :new
       end
     end
-  
+
     def update
       @casein_page_title = 'Update item'
-      
       @item = Item.find params[:id]
-    
+
       if @item.update_attributes item_params
         flash[:notice] = 'Item has been updated'
         redirect_to casein_items_path
@@ -47,7 +54,7 @@ module Casein
         render :action => :show
       end
     end
- 
+
     def destroy
       @item = Item.find params[:id]
 
@@ -55,12 +62,16 @@ module Casein
       flash[:notice] = 'Item has been deleted'
       redirect_to casein_items_path
     end
-  
+
     private
-      
+
       def item_params
         params.require(:item).permit(:title, :caption, :url, :description, :order, :image)
       end
 
+      def itemCount
+        @itemCount = Item.count
+        @order_collection = (1..(@itemCount + 2)).to_a - Item.pluck(:order)
+      end
   end
 end

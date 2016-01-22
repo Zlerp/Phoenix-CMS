@@ -1,4 +1,7 @@
 class PheonixController < ApplicationController
+  before_action :set_order, only: [:media, :news, :commercials]
+
+
   def index
     @disable_foot = true
   end
@@ -7,18 +10,21 @@ class PheonixController < ApplicationController
   end
 
   def media
-    @item = Item.all
   end
 
   def about
   end
 
   def news
-    @item = Item.all
   end
 
   def commercials
-    @item = Item.all
   end
+
+  private
+
+    def set_order
+      @item = Item.all.ordered
+    end
 
 end

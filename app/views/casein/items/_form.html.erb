@@ -20,11 +20,15 @@
 </div>
 
 <div class="row">
-	<div class="col-lg-6">
-		<%= casein_text_field f, f.object, :order %>
+	<div class="col-lg-2">
+		<%# casein_text_field f, f.object, :order %>
+		<%# casein_number_field f, f.object, :order %>
+		<%= casein_select f, f.object, :order, @order_collection  %>
 	</div>
+
+	<div class="col-lg-4 noSmall"></div>
 	<div class="col-lg-6">
-		<!-- <% casein_text_field f, f.object, :image %> -->
+	  <%# casein_text_field f, f.object, :image %>
 		<%= casein_file_field f, f.object, 'image', :image %>
 	</div>
 </div>
