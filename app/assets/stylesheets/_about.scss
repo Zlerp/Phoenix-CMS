@@ -11,7 +11,7 @@
 
   h3 {
     @include tShadow;
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: 900;
   }
 }
@@ -31,9 +31,9 @@
       height: auto;
       width: 60%;
       // max-width: 700px;
-      background-color: blue;
+      // background-color: blue;
       margin: 0 auto;
-      font-size: 20px;
+      font-size: 1em;
     }
   }
 
@@ -41,7 +41,25 @@
   height: auto;
   width: 100%;
 }
+
+
   .workObject {
-    height: 300px;
-    background-color: red;
+    height: 30vw;
+    // border-left: 1px solid #d2d2d2;
+    // border-right: 1px solid #d2d2d2;
+
+  }
+
+  @media screen and (max-width: 567px) { /* Specific to this particular image */
+
+    #camera1 {
+      padding-top: -10%;
+    }
+
+    .workObject {
+      height: 50vh;
+      border-bottom: 1px solid #d2d2d2;
+      border-top: 1px solid #d2d2d2;
+
+    }
   }

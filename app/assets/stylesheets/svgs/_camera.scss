@@ -1,0 +1,92 @@
+$speed: 2s;
+
+@mixin roatition($xOrigin, $yOrigin){
+    animation-name: rotator;
+    animation-duration: $speed / 1 ;
+    animation-iteration-count: infinite;
+    transform-origin: $xOrigin $yOrigin;
+    display: inline-block;
+    animation-delay: $speed / 1.4;
+    animation-timing-function: linear;
+}
+
+
+#camera1{
+padding-top: 10%;  height: auto;
+  width: auto;
+  path {
+    stroke-width: 10;
+    fill: rgba(255, 255, 255, 0);
+}
+
+  .st0{
+    stroke: white;
+    stroke-dasharray: 570;
+    stroke-dashoffset: 570;
+    transition: stroke-dashoffset $speed / 3 linear;
+    transition-delay: $speed / 4 ;
+
+  }
+  .st2{
+    stroke: white;
+    stroke-dasharray: 570;
+    stroke-dashoffset: 570;
+    transition: stroke-dashoffset $speed / 3 linear;
+    transition-delay: $speed / 4 ;
+
+  }
+  .st1{
+    stroke: white;
+    stroke-dasharray: 990;
+    stroke-dashoffset: 990;
+    transition: stroke-dashoffset $speed / 2 linear;
+    transition-delay: $speed / 5;
+
+
+  }
+
+  .st3{
+    stroke: white;
+    stroke-dasharray: 560;
+    stroke-dashoffset: 560;
+    transition: stroke-dashoffset $speed / 2 linear,
+                fill $speed / 1.33 ease-in-out;
+
+
+  }
+  .st4{
+    stroke: white;
+    stroke-dasharray: 420;
+    stroke-dashoffset: 420;
+    transition: stroke-dashoffset $speed / 2 linear,
+                fill $speed / 1.33 ease-in-out;
+    transition-delay: $speed / 10 ;
+  }
+}
+
+
+#camera1:hover {
+  .st4, .st3, .st2, .st1, .st0 {
+    //   PATH ANIMATION ON HOVER
+      stroke-dashoffset: 0;
+      stroke-opacity: 1;
+  }
+
+    //   SPINING ANIMATION ON HOVER
+  .st2{
+    @include roatition(50%, 50%)
+  }
+  .st0{
+    @include roatition(51%, 50%)
+  }
+}
+
+
+@keyframes rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
