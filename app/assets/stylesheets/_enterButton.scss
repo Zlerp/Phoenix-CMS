@@ -11,10 +11,12 @@
 
 button#enterPage{
   text-decoration: none;
-  font-size: 35px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
   color: white;
   width: 170px;
-  height: 70px;
+  height: 50px;
   border:3px solid white;
   background: none;
   text-align: center;
@@ -22,6 +24,7 @@ button#enterPage{
   outline: none;
   z-index: 1;
   opacity: .9;
+  border-radius: 25px;
 
 
 
@@ -45,6 +48,8 @@ button#enterPage:hover{
   color: black;
   background: white;
   opacity: .9;
+  font-weight: 600;
+  letter-spacing: 2px;
   -webkit-box-shadow: 0px 16px 80px -5px rgba(0,0,0,.8);
   -moz-box-shadow: 0px 16px 80px -5px rgba(0,0,0,.8);
   box-shadow: 0px 16px 80px -5px rgba(0,0,0,.8);
