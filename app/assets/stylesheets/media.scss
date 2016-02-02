@@ -16,7 +16,7 @@ $dGrey : #4a4a4f;
 .headline {
   font-size: 90px;
   text-align: center;
-  font-family: 'Lato', sans-serif;
+  @include lato;
   margin-top: 80px;
   margin-bottom: 40px;
   @include tShadow;
@@ -72,7 +72,7 @@ $dGrey : #4a4a4f;
 
 .clipInfo {
   z-index: 100;
-  font-family: 'Lato', sans-serif;
+  @include lato;
   text-align: center;
   color: white;
   text-shadow: 0px 2px 3px #222;

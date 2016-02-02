@@ -1,7 +1,7 @@
 .headline {
   font-size: 70px;
   text-align: center;
-  font-family: 'Lato', sans-serif;
+  @include lato;
   margin-top: 25vh;
   margin-bottom: 20vh;
   -moz-text-shadow:0px 2px 2px rgba(0,0,0,0.4);
@@ -18,14 +18,14 @@
 }
 
 .contactHead {
-  font-family: 'Lato', sans-serif;
+  @include lato;
   font-size: 30px;
   font-weight: 600;
 }
 
 .contactHeader {
   margin: 0 auto;
-  font-family: 'Lato', sans-serif;
+  @include lato;
   font-size: 30px;
   font-weight: 600;
   margin-top: 15vh;

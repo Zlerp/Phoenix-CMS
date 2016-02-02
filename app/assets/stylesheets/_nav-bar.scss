@@ -182,7 +182,7 @@
 }
 #cssmenu {
   width: auto;
-  font-family: 'Lato', sans-serif;
+  @include lato;
   line-height: 1;
   background: #ffffff;
 }

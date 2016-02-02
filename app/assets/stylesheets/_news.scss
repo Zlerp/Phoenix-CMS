@@ -1,14 +1,7 @@
 .backgroundNews {
-
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background: url("http://qlook.bz/uploads/camera-man.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: image-url('http://qlook.bz/uploads/camera-man.jpg') no-repeat center center fixed;
   z-index: -50;
+  @include bg;
 }
 
 .spacerBar {

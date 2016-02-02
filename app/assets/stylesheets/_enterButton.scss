@@ -1,7 +1,12 @@
+
+#bg {
+
+background: image-url('Production-image.png') no-repeat center center fixed;
+@include bg;
+
+}
+
 .buttonHold{
-  // background: blue;
-  // @include vAlign();
-  // margin: 0 auto;
   position: absolute;
   text-align: center;
   min-height: 100%;
@@ -12,7 +17,7 @@
 button#enterPage{
   text-decoration: none;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 1px;
   color: white;
   width: 170px;
@@ -25,6 +30,9 @@ button#enterPage{
   z-index: 1;
   opacity: .9;
   border-radius: 25px;
+  @include lato;
+  cursor: pointer;
+
 
 
 
@@ -35,33 +43,19 @@ button#enterPage{
 
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
-  -webkit-transition-property: box-shadow opacity color background;
-  // transition-property: box-shadow;
-  // -webkit-transition-property: opacity;
-  // transition-property: opacity;
+  -webkit-transition-property: all;
 
 }
 
 
 button#enterPage:hover{
-
   color: black;
   background: white;
   opacity: .9;
   font-weight: 600;
-  letter-spacing: 2px;
   -webkit-box-shadow: 0px 16px 80px -5px rgba(0,0,0,.8);
   -moz-box-shadow: 0px 16px 80px -5px rgba(0,0,0,.8);
   box-shadow: 0px 16px 80px -5px rgba(0,0,0,.8);
-}
-
-@keyframes pulse {
-  0% {
-    background-color: #001F3F;
-  }
-  100% {
-    background-color: #FF4136;
-  }
 }
 
 
@@ -73,7 +67,6 @@ button#enterPage:hover{
   z-index: 500;
 
   ul {
-    // background-color: green;
     width: 100%;
     margin: 0 auto;
     word-spacing: 20px;

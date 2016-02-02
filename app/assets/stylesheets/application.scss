@@ -36,12 +36,39 @@
     text-shadow:0px 2px 5px rgba(0,0,0,0.4);
   }
 
-  @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-  @import url(https://fonts.googleapis.com/css?family=Lato:400,900,700,300,100,300italic);
+  @mixin bg{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
+  }
+  // @mixin background () {
+  //   height: 100%;
+  //   width: 100%;
+  //   position: fixed;
+  //   -webkit-background-size: cover;
+  //   -moz-background-size: cover;
+  //   -o-background-size: cover;
+  //   background-size: cover;
+  // }
+
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+  // fonts:
+  @import url(https://fonts.googleapis.com/css?family=Lato:400,900,700,400italic,300,100|Pacifico);
+  @mixin pacifico {
+  	font-family: 'Pacifico', cursive;
+  }
+  @mixin lato {
+    font-family: 'Lato', sans-serif;
+  }
   @import "reset";
   @import "progressBar";
   @import "grid";
+  // @import "variable";
   // @import "grids-responsive-min";
 
 
