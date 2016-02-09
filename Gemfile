@@ -38,14 +38,14 @@ gem 'nokogiri', '~> 1.6', '>= 1.6.7.1'
 
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
-gem "better_errors"
-
+gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
   gem "better_errors"
+  gem 'rails_12factor'
 end
 
 group :development do
