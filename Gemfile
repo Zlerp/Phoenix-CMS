@@ -37,6 +37,7 @@ gem 'nokogiri', '~> 1.6', '>= 1.6.7.1'
 
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
+gem "better_errors"
 
 
 group :development, :test do
