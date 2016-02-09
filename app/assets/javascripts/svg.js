@@ -1,23 +1,3 @@
-//
-// //
-// $(document).ready(function() {
-//   $('svg').find('circle').fadeOut( 0 );
-//
-//   var transDur = $('svg').find('.removingCirc').valueOf().css('transition-duration');
-//   console.log(transDur);
-//   $('svg').hover(function() {
-//     /* Stuff to do when the mouse enters the element */
-//       $(this).find('circle').fadeIn( 100 );
-//       $(this).find('circle').attr("class", "social-circle movingCirc");
-//
-//       console.log('on');
-//   }, function() {
-//     /* Stuff to do when the mouse leaves the element */
-//     $(this).find('circle').attr("class", "social-circle removingCirc");
-//     $(this).find('circle').delay( 999 ).fadeOut( 0 );
-//     console.log("hover off");
-//   });
-// });
 
 
 // FIND PATH LENGTH WITH JS
@@ -119,8 +99,4 @@ $(function() {
         TweenLite.to($(this), 0.6, {opacity: 1});
       });
   });
-
-
-
-
 });

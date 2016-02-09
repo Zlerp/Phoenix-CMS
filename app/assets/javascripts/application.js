@@ -14,9 +14,6 @@
 //= require jquery_ujs
 // require jquery-ui.min
 // require turbolinks
-//= rquire Tweenlite.min.js
-//= require tweenCSS.min.js
-//= require TweenEase.min.js
 //= require jquery.fancybox
 //= require jquery.fancybox-buttons
 //= require jquery.fancybox-media
