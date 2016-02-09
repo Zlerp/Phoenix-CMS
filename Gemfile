@@ -45,7 +45,7 @@ group :development, :test do
   gem 'byebug'
   gem 'pry'
   gem "better_errors"
-  gem 'rails_12factor'
+  # gem 'rails_12factor'
 end
 
 group :development do
