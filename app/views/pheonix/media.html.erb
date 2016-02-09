@@ -27,32 +27,32 @@
           </p>
         </div>
 
-        <%# @item.in_groups_of(3).each do |group| %>
+        <% @item.in_groups_of(3).each do |group| %>
           <div class="section group">
-            <%# group.each do |i| %>
+            <% group.each do |i| %>
               <div class="col col4">
                 <!-- <a class="fancybox fancybox.iframe" data-thumbnail="https://pbs.twimg.com/profile_images/623253223437004800/85wFpTrM.jpg" rel="gallery" href="https://www.youtube.com/embed/MPIfJ0f19FU" title="Title"> -->
-                <%# link_to(i.url,:class => "fancybox fancybox.iframe", 'data-thumbnail' => "#{i.image.thumb.url}", :rel => "gallery", :title => "#{i.title}") do %>
+                <%= link_to(i.url,:class => "fancybox fancybox.iframe", 'data-thumbnail' => "#{i.image.thumb.url}", :rel => "gallery", :title => "#{i.title}") do %>
                   <div class="mediaClip">
                     <h2 class="clipTitle clipInfo hide">
-                      <%# i.title %>
+                      <%= i.title %>
                     </h2>
                     <p class="clipCaption clipInfo">
-                      <%# i.caption %>
+                      <%= i.caption %>
                     </p>
                     <!-- <img class="mediaImg hCenterBlock vAlign"src="http://www.intrawallpaper.com/static/images/pier_1080_lglraL5.jpg" alt="" /> -->
-                    <%# image_tag(i.image.url, :class => "mediaImg") %>
+                    <%= image_tag(i.image.url, :class => "mediaImg") %>
                   </div>
-                <%# end %>
+                <% end %>
               </div>
-            <%# end %>
+            <% end %>
           </div>
-        <%# end %>
+        <% end %>
         </div>
       </div>
     </div>
 
-    <!-- <script>
+    <script>
     $(document).ready(function() {
 
       //  MODAL MEDIA PLAYER
@@ -85,6 +85,6 @@
           return false;
           });
     });
-    </script> -->
+    </script>
   </body>
 </html>
